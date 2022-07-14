@@ -107,6 +107,13 @@ def 启动():
     命令一='cd {}\Genshin" "Impact" "Game'.format(系统路径转换(path))
     os.system("{}:&".format(path[:1])+命令一+"&.\YuanShen")
 
+def 检查更新():
+    最新版本=requests.get("http://8.142.28.115/版本").text
+    当前版本=open("data/当前转服器版本")
+    if float(当前版本)<float(最新版本):
+        提示("更新提示","好耶！惠惠更新啦，快下载新版本叭~")
+
+
 if __name__ == '__main__':
 
     tk=tkinter.Tk()
